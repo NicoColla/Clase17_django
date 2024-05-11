@@ -5,10 +5,10 @@ from datetime import datetime
 
 
 def saludo(request):
-    return HttpResponse("HOLA NEGROS")
+    return HttpResponse("HOLA ._________.")
 
 def segunda_vista(request):
-    return HttpResponse("<h1> TE COJO EN LA PISTA JAJAJ XD (puedo usar etiquetas html en la respuesta tu culo con esta jijijijazo) </h1>")
+    return HttpResponse("<h1> puedo usar etiquetas html en la respuesta </h1>")
 
 def nombre(request, nombre: str, apellido: str):
     nombre = nombre.capitalize()
@@ -24,7 +24,11 @@ def nombre(request, nombre: str, apellido: str):
 #    return HttpResponse(mi_documento)
 
 def probando_template(request):
-    datos = {"saludo": "HOLA TU COLA JAJA XD", 
+    datos = {"saludo": "HOLA", 
              "autor": "Nicolás Uriel Lenga",
              "date": datetime.now()}
     return render(request, "template1.html", datos)
+
+def mostrar_notas(request):
+    notas = (10, 3, 5, 8, 8, 9)
+    return render(request, "notas.html", {"notas": notas})

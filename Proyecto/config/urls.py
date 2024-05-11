@@ -25,4 +25,5 @@ urlpatterns = [
     path("otra-vista/", views.segunda_vista),
     path("nombre/<nombre>/<apellido>/", views.nombre),
     path("mi_html/", views.probando_template),
+    path("notas/", views.mostrar_notas)
 ]
